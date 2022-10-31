@@ -1,3 +1,5 @@
+import os
+
 def minus10(x):
     if x >= 10:
         x = x - 10
@@ -49,74 +51,79 @@ def st32(st):
 
 
 #START
-num = ""
-while len(num)<5 or len(num)>5:
-    num = input ("Inserte Nro. (5 digitos): ")
-    # num = "82502"
-    try: int(num)
-    except: num = ""
+while True:
 
-numlist = []
-numlen = len(num)
+    os.system('clear')
+        
+    num = ""
+    while len(num)<5 or len(num)>5:
+        num = input ("Inserte Nro. (5 digitos): ")
+        # num = "82502"
+        try: int(num)
+        except: num = ""
 
-for i in range (numlen):
-    numlist.append(int(num[i]))
+    numlist = []
+    numlen = len(num)
 
-for j in range (10):
-    print (">> Ciclo",j+1, "<<")
-    
-    # Ciclo 1
-    if j == 0: st5 = numlist
-    st4 = st54(st5)
-    st3 = st43(st4)
-    st2 = st32(st3)
-    list(map(printList, st5))
-    print ("")
-    # print (st5)
-    # print (st4)
-    # print (st3)
-    # print (st2)
+    for i in range (numlen):
+        numlist.append(int(num[i]))
 
-    # Ciclo2
-    st5 = []
-    st5.append(numlist[0])
-    st5.append(numlist[1])
-    st5.append(numlist[3]) #segundo numero del triple base
-    st5.append(st2[0])
-    st5.append(st2[1])
-    st4 = st54(st5)
-    st3 = st43(st4)
-    st2 = st32(st3)
-    list(map(printList, st5))
-    print ("")
-    # print (st5)
-    # print (st4)
-    # print (st3)
-    # print (st2)
+    for j in range (10):
+        print (">> Ciclo",j+1, "<<")
+        
+        # Ciclo 1
+        if j == 0: st5 = numlist
+        st4 = st54(st5)
+        st3 = st43(st4)
+        st2 = st32(st3)
+        list(map(printList, st5))
+        print ("")
+        # print (st5)
+        # print (st4)
+        # print (st3)
+        # print (st2)
 
-    # Ciclo3
-    st5 = []
-    st5.append(numlist[0])
-    st5.append(numlist[1])
-    st5.append(numlist[4]) #tercer numero del triple base
-    st5.append(st2[0])
-    st5.append(st2[1])
-    st4 = st54(st5)
-    st3 = st43(st4)
-    st2 = st32(st3)
-    list(map(printList, st5))
-    print ("")
-    # print (st5)
-    # print (st4)
-    # print (st3)
-    # print (st2)
+        # Ciclo2
+        st5 = []
+        st5.append(numlist[0])
+        st5.append(numlist[1])
+        st5.append(numlist[3]) #segundo numero del triple base
+        st5.append(st2[0])
+        st5.append(st2[1])
+        st4 = st54(st5)
+        st3 = st43(st4)
+        st2 = st32(st3)
+        list(map(printList, st5))
+        print ("")
+        # print (st5)
+        # print (st4)
+        # print (st3)
+        # print (st2)
 
-    # Ciclo4 para solo armar el nuevo st5
-    st5 = []
-    st5.append(numlist[0])
-    st5.append(numlist[1])
-    st5.append(numlist[2]) #primer numero del triple base
-    st5.append(st2[0])
-    st5.append(st2[1])
+        # Ciclo3
+        st5 = []
+        st5.append(numlist[0])
+        st5.append(numlist[1])
+        st5.append(numlist[4]) #tercer numero del triple base
+        st5.append(st2[0])
+        st5.append(st2[1])
+        st4 = st54(st5)
+        st3 = st43(st4)
+        st2 = st32(st3)
+        list(map(printList, st5))
+        print ("")
+        # print (st5)
+        # print (st4)
+        # print (st3)
+        # print (st2)
 
+        # Ciclo4 para solo armar el nuevo st5
+        st5 = []
+        st5.append(numlist[0])
+        st5.append(numlist[1])
+        st5.append(numlist[2]) #primer numero del triple base
+        st5.append(st2[0])
+        st5.append(st2[1])
 
+    print()
+    input ("Presione una tecla para continuar...")

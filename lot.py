@@ -53,7 +53,8 @@ def st32(st):
 #START
 while True:
 
-    os.system('clear')
+    #Clear screen
+    os.system('cls' if os.name=='nt' else 'clear')
         
     num = ""
     while len(num)<5 or len(num)>5:

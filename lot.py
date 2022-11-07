@@ -69,8 +69,10 @@ while True:
     for i in range (numlen):
         numlist.append(int(num[i]))
 
-    for j in range (10):
-        print (">> Ciclo",j+1, "<<")
+    for j in range (90):
+        if j < 9: cerodigit = "0"
+        else: cerodigit = ""
+        print (">> Ciclo " + cerodigit + str(j+1), end=": ")
         
         # Ciclo 1
         if j == 0: st5 = numlist
@@ -78,7 +80,7 @@ while True:
         st3 = st43(st4)
         st2 = st32(st3)
         list(map(printList, st5))
-        print ("")
+        print ("", end=" ")
         # print (st5)
         # print (st4)
         # print (st3)
@@ -95,7 +97,7 @@ while True:
         st3 = st43(st4)
         st2 = st32(st3)
         list(map(printList, st5))
-        print ("")
+        print ("", end=" " )
         # print (st5)
         # print (st4)
         # print (st3)
